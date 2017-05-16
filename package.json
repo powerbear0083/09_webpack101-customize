@@ -1,0 +1,22 @@
+{
+  "name": "webpack-starter",
+  "version": "1.0.0",
+  "description": "Webpack prohect starter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://powerbear0083@github.com/powerbear0083/webpack101-customize.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/powerbear0083/webpack101-customize/issues"
+  },
+  "homepage": "https://github.com/powerbear0083/webpack101-customize#readme",
+  "devDependencies": {
+    "webpack": "^2.5.1"
+  }
+}
