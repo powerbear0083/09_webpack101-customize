@@ -3,11 +3,15 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const path = require("path");
 
 module.exports = {
-	entry: './src/app.js',
+	// entry: './src/app.js',
+	entry: {
+		app: './src/app.js',
+		contact: './src/contact.js'
+	},
 	output: {
 		// path: '/Users/eu-team/eu-work/self-practice/09_webpack101-customize/dist',
 		path: path.resolve(__dirname, 'dist'),
-		filename: 'app.bundle.js'
+		filename: '[name].bundle.js'
 	},
 	module: {
 		rules: [
@@ -40,7 +44,15 @@ module.exports = {
 	        // 	collapseWhitespace: true
 	        // },
 	        hash: true,
+	        excludeChunks: ['contact'],
 	        template: './src/index.html'
+	    }),
+	    new HtmlWebpackPlugin({
+	        title: 'Contact Page',
+	        hash: true,
+	        chunks: ['contact'],
+	        filename: 'contact.html',
+	        template: './src/contact.html'
 	    }),
 	    new ExtractTextPlugin({
 	    	filename: 'app.css',
