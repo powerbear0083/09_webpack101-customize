@@ -1,0 +1,11 @@
+doctype html
+html(lang="en")
+	head 
+		title Pug title
+	body
+		include include/_header.pug
+		.container
+			p Pug is a terse and simple templating language with a strong focus on performance and powerful features.111122222111222qq
+		#root
+		-for(var i = 0; i < 3; i++)
+			img(src="img/icon.svg", alt="icon")
